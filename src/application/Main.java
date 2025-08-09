@@ -15,7 +15,7 @@ public class Main {
         sistema.cadastroConta();
 
         do {
-            System.out.println("Sacar(sim ou não)? ");
+            System.out.println("Sacar(sim, não ou mostrar saques)? ");
             opcao = sc.nextLine();
 
             switch (opcao){
@@ -25,9 +25,13 @@ public class Main {
                 case "não":
                     System.out.println(sistema.getConta());
                     break;
+                case "mostrar saques":
+                    sistema.mostrarSaques();
+                    break;
                 default:
                         System.out.println("Opção inválida!");
+                        break;
             }
-        } while (opcao.equalsIgnoreCase("sim"));
+        } while (opcao.equalsIgnoreCase("sim") || !opcao.equalsIgnoreCase("não"));
     }
 }

@@ -44,6 +44,6 @@ public class Conta {
     }
 
     public void removeBalanco(BigDecimal saque) {
-        balanco.subtract(saque);
+        balanco = balanco.subtract(saque);
     }
 }
